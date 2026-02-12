@@ -28143,6 +28143,10 @@ bool CvDiplomacyAI::IsWantsOpenBordersWithPlayer(PlayerTypes ePlayer)
 	if (IsVassal(ePlayer) || GET_PLAYER(ePlayer).GetDiplomacyAI()->IsVassal(GetID()))
 		return true;
 
+	// 친선관계 필수!
+	if (!IsDoFAccepted(ePlayer))
+		return false;
+
 	if (IsUntrustworthy(ePlayer))
 		return false;
 
@@ -28259,6 +28263,10 @@ bool CvDiplomacyAI::IsWantsOpenBordersWithPlayer(PlayerTypes ePlayer)
 /// Are we willing to give Open Borders to eOtherPlayer?
 bool CvDiplomacyAI::IsWillingToGiveOpenBordersToPlayer(PlayerTypes ePlayer)
 {
+	// 친선관계 필수!
+	if (!IsDoFAccepted(ePlayer))
+		return false;
+
 	if (IsUntrustworthy(ePlayer))
 	{
 		return false;
