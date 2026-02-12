@@ -28,7 +28,7 @@
 #define MAX_PREGAME_MAJOR_CIVS                              (22)
 #define MAX_MAJOR_CIVS										MOD_GLOBAL_MAX_MAJOR_CIVS
 #else
-#define MAX_MAJOR_CIVS										(22)
+#define MAX_MAJOR_CIVS										(43)
 #endif
 #define MAX_MINOR_CIVS										(MAX_CIV_PLAYERS - MAX_MAJOR_CIVS)
 
